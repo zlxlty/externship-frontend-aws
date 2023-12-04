@@ -1,16 +1,16 @@
-version: '3'
+version: "3"
 services:
   website:
-    container_name: 'website'
-    image: '${WEBSITE_IMAGE}'
+    container_name: "website"
+    image: "${WEBSITE_IMAGE}"
     ports:
       - "3000:3000"
     volumes:
-      - website:./website/build/  # build files will be added at this directory !!!
+      - website:./website/dist/ # build files will be added at this directory !!!
 
   nginx:
-    container_name: 'nginx'
-    image: '${NGINX_IMAGE}'
+    container_name: "nginx"
+    image: "${NGINX_IMAGE}"
     ports:
       - "80:80"
     volumes:
