@@ -1,6 +1,7 @@
 version: "3"
 services:
   website:
+    container_name: website
     build:
       context: ./website
       dockerfile: Dockerfile
@@ -11,6 +12,7 @@ services:
       - website:./website/dist/ # build files will be added at this directory !!!
 
   nginx:
+    container_name: nginx
     build:
       context: ./nginx
       dockerfile: Dockerfile
@@ -19,3 +21,6 @@ services:
       - "80:80"
     volumes:
       - website:/usr/share/nginx/html/website # Copy React App's build files to the Nginx directory
+
+volumes:
+  website:
