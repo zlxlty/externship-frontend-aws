@@ -1,5 +1,3 @@
-# Use an official Node.js runtime as the base image
-
 FROM node:18-alpine
 # Set the working directory within the container
 WORKDIR /website
@@ -12,6 +10,9 @@ RUN npm install
 
 # Copy the rest of the application code to the container
 COPY . .
+
+# Build the React app
+RUN npm run build
 
 # Build the React app
 EXPOSE 3000
