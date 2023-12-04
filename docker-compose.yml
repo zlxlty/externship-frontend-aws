@@ -1,6 +1,7 @@
 version: "3"
 services:
   website:
+    container_name: website
     build:
       context: ./website
       dockerfile: Dockerfile
@@ -8,6 +9,7 @@ services:
       - website:/website/dist/ # build files will be added at this directory !!!
 
   nginx:
+    container_name: nginx
     build:
       context: ./nginx
       dockerfile: Dockerfile
