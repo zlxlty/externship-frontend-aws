@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - website:./website/dist/ # build files will be added at this directory !!!
+      - website:/website/dist/ # build files will be added at this directory !!!
 
   nginx:
     container_name: "nginx"
