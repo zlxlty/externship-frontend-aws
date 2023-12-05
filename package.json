@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "axios": "^1.6.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "react-error-overlay": "^6.0.9"
+  }
+}
